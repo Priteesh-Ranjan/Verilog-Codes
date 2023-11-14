@@ -1,22 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Institute: NIT Rourkela 
 // Create Date: 02.03.2023 12:16:24
-// Design Name: 
-// Module Name: fifon
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Design Name: Priteesh Ranjan
+// Module Name: FIFO
+// Project Name: FIFO 
 //////////////////////////////////////////////////////////////////////////////////
 
 
