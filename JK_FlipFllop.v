@@ -1,22 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Institute: NIT Rourkela 
 // Create Date: 05.04.2023 19:46:44
-// Design Name: 
-// Module Name: jkff
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Design Name: Priteesh Ranjan
+// Module Name: JK Flip Flop
+// Project Name: JK_Flip_Flop
 //////////////////////////////////////////////////////////////////////////////////
 
 
