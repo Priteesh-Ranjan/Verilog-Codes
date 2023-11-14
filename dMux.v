@@ -1,22 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Institute: NIT Rourkela 
 // Create Date: 05.04.2023 23:30:23
-// Design Name: 
-// Module Name: dmux
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Design Name: Priteesh Ranjan
+// Module Name: Dmultiplexer
+// Project Name: dmuux
 //////////////////////////////////////////////////////////////////////////////////
 
 
