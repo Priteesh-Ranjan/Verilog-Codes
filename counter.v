@@ -3,8 +3,8 @@
 // Institute: NIT Rourkela 
 // Create Date: 02.02.2023 18:33:16
 // Design Name: Priteesh Ranjan
-// Module Name: Mux
-// Project Name: 4x1 Mux 
+// Module Name: Counter
+// Project Name: Counter
 //////////////////////////////////////////////////////////////////////////////////
 
 module counter_1(input clk,rst, output[3:0] cntr);
