@@ -4,19 +4,7 @@
 // Engineer: 
 // 
 // Create Date: 02.02.2023 18:33:16
-// Design Name: 
-// Module Name: counter_1
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+
 //////////////////////////////////////////////////////////////////////////////////
 
 module counter_1(input clk,rst, output[3:0] cntr);
