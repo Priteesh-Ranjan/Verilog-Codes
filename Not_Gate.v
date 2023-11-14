@@ -2,8 +2,8 @@
 -- Institute: NIT Rourkela 
 -- Create Date: 18.01.2023 19:34:48
 -- Design Name: Priteesh Ranjan
--- Module Name: Mux
--- Project Name: 4x1 Mux 
+-- Module Name: Not_Gate
+-- Project Name: notGate
 ----------------------------------------------------------------------------------
 
 
