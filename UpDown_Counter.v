@@ -1,22 +1,10 @@
 u`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Institute: NIT Rourkela 
 // Create Date: 09.02.2023 08:34:52
-// Design Name: 
-// Module Name: up_dwn
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Design Name: Priteesh Ranjan
+// Module Name: UP Down Counter
+// Project Name: up_down_counter
 //////////////////////////////////////////////////////////////////////////////////
 
 
