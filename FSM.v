@@ -1,3 +1,12 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Institute: NIT Rourkela 
+// Create Date: 01.02.2023 23:10:07
+// Design Name: Priteesh Ranjan
+// Module Name: Finite State Machine
+// Project Name: FSM
+//////////////////////////////////////////////////////////////////////////////////
+
 module fsm_11010 (
     input A, // serial bit Input sequence
     input clk, // clock signal
