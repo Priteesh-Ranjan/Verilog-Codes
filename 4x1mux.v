@@ -1,22 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Institute: NIT Rourkela 
 // Create Date: 01.02.2023 23:10:07
-// Design Name: 
-// Module Name: mux4x1
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Design Name: Priteesh Ranjan
+// Module Name: Mux
+// Project Name: 4x1 Mux 
 //////////////////////////////////////////////////////////////////////////////////
 
 
