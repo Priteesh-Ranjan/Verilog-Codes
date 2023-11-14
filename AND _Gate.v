@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 15.01.2023 00:20:39
+// Create Date: 13.01.2023 00:53:02
 // Design Name: 
-// Module Name: or_gate
+// Module Name: and_gate
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,9 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module or_gate(a,b,c);
+module and_gate(a,b,c);
 input a,b;
 output c;
-assign c = a|b;
+and(c,a,b);
 endmodule
