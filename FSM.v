@@ -10,85 +10,80 @@
 //              output (Y) when the sequence is detected.
 //////////////////////////////////////////////////////////////////////////////////
 
-module fsm_11010 (
-    input A,       // Serial bit input sequence
-    input clk,     // Clock signal
-    input reset,   // Reset signal
-    output reg Y   // Output indicating sequence detection
+
+module fsm2(
+  input clk,
+  input rstn,
+  input in,
+  output out
 );
 
-// Enumeration for states
-typedef enum logic [2:0] {
-    S0, S1, S2, S3, S4
-} state_type;
+  // Define states using parameters
+  parameter IDLE = 0,
+            S1 = 1,
+            S11 = 2,
+            S110 = 3,
+            S1101 = 4,
+            S11010 = 5;
+  
+  // Registers to hold current and next state
+  reg [2:0] cur_state, next_state;
+  
+  // Output assignment based on current state
+  assign out = (cur_state == S11010) ? 1 : 0;
+  
+  // State transition process triggered on positive clock edge
+  always @ (posedge clk) begin
+    if (!rstn)   // Asynchronous active-low reset
+      cur_state <= IDLE;
+    else
+      cur_state <= next_state;  // Update current state based on next_state
+  end
 
-// State registers
-reg state_reg, next_state_reg;
+  // State transition logic based on current state and input
+  always @ (cur_state or in) begin
+    case (cur_state)
+      IDLE : begin
+        if (in)
+          next_state = S1;  // Transition to state S1 upon input assertion
+        else
+          next_state = IDLE;  // Remain in IDLE state otherwise
+      end
 
-// State transition and output generation logic
-always @(posedge clk or posedge reset) begin
-    if (reset) begin
-        // Synchronous Reset: Reset to initial state S0
-        state_reg <= S0;
-    end else begin
-        // Update state on positive clock edge
-        state_reg <= next_state_reg;
-    end
-end
+      S1: begin
+        if (in)
+          next_state = S11;  // Transition to state S11 upon continued input assertion
+        else
+          next_state = IDLE;  // Return to IDLE state upon input deassertion
+      end
 
-// State transition and output assignment logic
-always @(state_reg or A) begin
-    // Default output value
-    Y = 0;
+      S11: begin
+        if (!in)
+          next_state = S110;  // Transition to state S110 upon input deassertion
+        else
+          next_state = S11;  // Remain in S11 state upon input assertion
+      end
 
-    // State transition logic based on current state (state_reg) and input (A)
-    case (state_reg)
-        S0: begin
-            if (A) begin
-                next_state_reg = S1; // Transition to S1 on input '1'
-            end else begin
-                next_state_reg = S0; // Remain in S0 on input '0'
-            end
-        end
+      S110 : begin
+        if (in)
+          next_state = S1101;  // Transition to state S1101 upon input assertion
+        else
+          next_state = IDLE;  // Return to IDLE state upon input deassertion
+      end
 
-        S1: begin
-            if (A) begin
-                next_state_reg = S2; // Transition to S2 on input '1'
-            end else begin
-                next_state_reg = S0; // Reset to S0 on input '0'
-            end
-        end
+      S1101 : begin
+        if (!in)
+          next_state = S11010;  // Transition to state S11010 upon input deassertion
+        else
+          next_state = IDLE;  // Return to IDLE state upon input assertion
+      end
 
-        S2: begin
-            if (A) begin
-                next_state_reg = S2; // Remain in S2 on input '1'
-            end else begin
-                next_state_reg = S3; // Transition to S3 on input '0'
-            end
-        end
-
-        S3: begin
-            if (A) begin
-                next_state_reg = S4; // Transition to S4 on input '1'
-            end else begin
-                next_state_reg = S0; // Reset to S0 on input '0'
-            end
-        end
-
-        S4: begin
-            if (A) begin
-                next_state_reg = S2; // Transition back to S2 on input '1'
-                Y = 1;              // Output '1' when sequence "11010" is detected
-            end else begin
-                next_state_reg = S0; // Reset to S0 on input '0'
-            end
-        end
-
-        default: begin
-            // Default case: No action needed for other states
-        end
+      S11010: begin
+        if (in)
+          next_state = IDLE;  // Return to IDLE state upon input assertion
+        else
+          next_state = IDLE;  // Remain in S11010 state upon input deassertion
+      end
     endcase
-end
-
+  end
 endmodule
-
